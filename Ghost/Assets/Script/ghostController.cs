@@ -5,7 +5,6 @@ using UnityEngine;
 public class ghostController : MonoBehaviour {
 
 	public GameObject controlObject;	// 憑依対象を保持するオブジェクト
-	public bool isPossessing = false;			// 憑依中フラグ
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +40,9 @@ public class ghostController : MonoBehaviour {
 
 		// 憑依対象の大きさを調べて位置(憑依後の高さ)やcolliderの大きさを反映
 		float GObj_Height = GObj.transform.localScale.y * boxcol.size.y;
+		float GObj_Radius = GObj.transform.localScale.x * boxcol.size.x * 0.5f;
+
+		this.GetComponent<CapsuleCollider> ().radius = GObj_Radius;
 
 		// 高さの反映とローカル位置の固定
 		GObj.transform.localPosition = new Vector3 (0, GObj_Height * 0.5f, 0);
@@ -51,8 +53,7 @@ public class ghostController : MonoBehaviour {
 		// rigidbodyに移動制限を掛ける(ローカル位置の固定)
 		GObj.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePosition;
 
-		// 憑依中フラグを立てる
-		isPossessing = true;
+		this.gameObject.layer = 9;	// Layerを"Phisics"に変更
 	}
 
 	// 離脱(操作対象から離れる)
@@ -64,6 +65,7 @@ public class ghostController : MonoBehaviour {
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
 			}
+			this.gameObject.layer = 8;	// Layerを"Psychic"に変更
 		}
 	}
 }
