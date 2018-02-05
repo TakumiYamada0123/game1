@@ -25,7 +25,7 @@ public class someGaze : MonoBehaviour {
 		if (Input.GetMouseButtonUp (1)) {
 			// cameraが何かを注視している
 			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist)) {
-				//Debug.Log (hit.collider.gameObject.name);
+				Debug.Log (hit.collider.gameObject.name);
 
 				// 対象のTagがControllableのとき
 				if (hit.collider.tag == "Controllable") {

@@ -53,7 +53,7 @@ public class ghostController : MonoBehaviour {
 		// rigidbodyに移動制限を掛ける(ローカル位置の固定)
 		GObj.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePosition;
 
-		this.gameObject.layer = 9;	// Layerを"Phisics"に変更
+		this.gameObject.layer = 9;	// Layerを"Physics"に変更
 	}
 
 	// 離脱(操作対象から離れる)
