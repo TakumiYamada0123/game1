@@ -315,7 +315,7 @@ MonoBehaviour:
     headBob: 1
   movement:
     speed:
-      vector: {x: 1, y: 1}
+      vector: {x: 0, y: 0}
       value:
         value: 0
         max: 0
@@ -344,28 +344,28 @@ MonoBehaviour:
       radius: 0.35
       speed: 3.5
       stepTime: 0.5
-      sounds: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
-      headbob: {fileID: 11400000, guid: 5caa6b9bec02b684f82233c569ee1075, type: 2}
+      sounds: {fileID: 0}
+      headbob: {fileID: 0}
     sprint:
       speed: 7
       stepTime: 0.3
-      sounds: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
-      headbob: {fileID: 11400000, guid: a7a2dfcb6efe77849b6e3d15a7010400, type: 2}
-      input: 1
+      sounds: {fileID: 0}
+      headbob: {fileID: 0}
+      input: 0
     crouch:
       height: 1
       radius: 0.35
       speed: 1
       stepTime: 0.8
-      sounds: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
-      headbob: {fileID: 11400000, guid: e86a9e920ad895f4e99f6afd7559e5f2, type: 2}
+      sounds: {fileID: 0}
+      headbob: {fileID: 0}
     prone:
       height: 0.4
       radius: 0.2
       speed: 0.5
       stepTime: 1
-      sounds: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
-      headbob: {fileID: 11400000, guid: e422d5b15f4111d45aa29bcffd355377, type: 2}
+      sounds: {fileID: 0}
+      headbob: {fileID: 0}
     traverser:
       lerp:
         value: 0
@@ -375,8 +375,8 @@ MonoBehaviour:
       cameraOffset: 0.05
   slide:
     stepTime: 0.4
-    sounds: {fileID: 11400000, guid: aa1939ec359a64f4f90bdb07960969b9, type: 2}
-    headbob: {fileID: 11400000, guid: 1c193a9c0fd2d5d4c8887186e9acc867, type: 2}
+    sounds: {fileID: 0}
+    headbob: {fileID: 0}
     power:
       value: 0
       delta: 0.85
@@ -389,13 +389,13 @@ MonoBehaviour:
       value: 0
       delta: 12
       angle: 0
-      max: 8
+      max: 7
     maxCount: 1
     pushDownMultiplier: 2.5
   groundCast:
     mask:
       serializedVersion: 2
-      m_Bits: 4294967039
+      m_Bits: 4294967295
     triggerInteraction: 1
     checkRange: 0.15
     radiusScale: 0.5
@@ -406,41 +406,41 @@ MonoBehaviour:
       draw: 1
       color: {r: 0, g: 1, b: 0, a: 1}
     slope:
-      value: 4.574103
+      value: 0
       max: 50
     directionalSlope: 0
-    grounded: 1
+    grounded: 0
     minFallDistance: 0.2
   roofCast:
     mask:
       serializedVersion: 2
-      m_Bits: 4294967039
+      m_Bits: 4294967295
     triggerInteraction: 1
     checkRange: 0.15
     radiusScale: 0.5
     startOffset: 0.1
-    normal: {x: 0, y: 1, z: 0}
+    normal: {x: 0, y: 0, z: 0}
     rigidbody: {fileID: 0}
     debug:
       draw: 1
       color: {r: 0, g: 1, b: 0, a: 1}
   sound:
-    source: {fileID: 91018230}
+    source: {fileID: 0}
     movement:
       stepTime: 0
     defaultStates:
-      jump: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
-      land: {fileID: 11400000, guid: e50c2617fb106c241b54562cfef1cb0b, type: 2}
+      jump: {fileID: 0}
+      land: {fileID: 0}
   cameraRig:
-    pivot: {fileID: 22950474}
-    camera: {fileID: 431484182}
+    pivot: {fileID: 0}
+    camera: {fileID: 0}
     coordinates:
       pivot:
-        position: {x: 0, y: 0.84999996, z: 0}
-        rotation: {x: 0, y: 0, z: 0, w: 1}
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
       camera:
-        position: {x: 0, y: 0.84999996, z: 0}
-        rotation: {x: 0.515038, y: 0, z: 0, w: -0.8571673}
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
   look:
     modifiers:
       sensitivity: 5
@@ -461,14 +461,14 @@ MonoBehaviour:
     alignScale: 0.8
     mask:
       serializedVersion: 2
-      m_Bits: 4294967039
+      m_Bits: 4294967295
     triggerInteraction: 1
     offset: 0.1
   headbob:
     scale: 1
     overrideStates: {fileID: 0}
     offset: {x: 0, y: 0, z: 0}
-  inputModulator: {fileID: 11400000, guid: 9e52d3c218d2e0944b3c79f7ca45c8e1, type: 2}
+  inputModulator: {fileID: 0}
 --- !u!114 &91018234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,9 +481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 431484182}
-  rayDist: 20
+  rayDist: 10
   rayRadius: 2
-  GhostCtrl: {fileID: 91018235}
+  GhostCtrl: {fileID: 0}
 --- !u!114 &91018235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc137046e40c846b00b927460a7e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlObject: {fileID: 1463829633}
+  controlObject: {fileID: 0}
+  isPossessing: 0
 --- !u!1001 &397884629
 Prefab:
   m_ObjectHideFlags: 0
@@ -739,7 +740,7 @@ GameObject:
   - component: {fileID: 998493638}
   - component: {fileID: 998493637}
   - component: {fileID: 998493641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CubeX
   m_TagString: Controllable
   m_Icon: {fileID: 0}
@@ -837,7 +838,7 @@ GameObject:
   - component: {fileID: 1149077429}
   - component: {fileID: 1149077428}
   - component: {fileID: 1149077432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CubeZ
   m_TagString: Controllable
   m_Icon: {fileID: 0}

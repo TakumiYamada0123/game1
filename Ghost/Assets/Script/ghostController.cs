@@ -51,8 +51,7 @@ public class ghostController : MonoBehaviour {
 		// rigidbodyに移動制限を掛ける(ローカル位置の固定)
 		GObj.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePosition;
 
-		// 憑依中フラグを立てる
-		isPossessing = true;
+		this.gameObject.layer = 9;
 	}
 
 	// 離脱(操作対象から離れる)
@@ -64,6 +63,7 @@ public class ghostController : MonoBehaviour {
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
 			}
+			this.gameObject.layer = 8;
 		}
 	}
 }
