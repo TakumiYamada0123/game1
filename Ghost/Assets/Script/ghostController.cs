@@ -23,7 +23,7 @@ public class ghostController : MonoBehaviour {
 		foreach (Transform child in controlObject.transform) {
 			
 			if (child.gameObject.tag == "Controllable") {
-				
+				child.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
 			}
@@ -51,7 +51,9 @@ public class ghostController : MonoBehaviour {
 		boxcol.enabled = false;
 
 		// rigidbodyに移動制限を掛ける(ローカル位置の固定)
-		GObj.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePosition;
+		GObj.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePosition |
+														RigidbodyConstraints.FreezeRotationX |
+														RigidbodyConstraints.FreezeRotationZ;
 
 		this.gameObject.layer = 9;	// Layerを"Physics"に変更
 	}
@@ -61,7 +63,7 @@ public class ghostController : MonoBehaviour {
 		foreach (Transform child in controlObject.transform) {
 
 			if (child.gameObject.tag == "Controllable") {
-
+				child.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
 			}

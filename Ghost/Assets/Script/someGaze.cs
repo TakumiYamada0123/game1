@@ -22,7 +22,7 @@ public class someGaze : MonoBehaviour {
 		Debug.DrawRay (ray.origin, ray.direction * rayDist, Color.black);				// cameraの向き
 
 		// マウス離上時
-		if (Input.GetMouseButtonUp (1)) {
+		if (Input.GetMouseButtonDown (1)) {
 			// cameraが何かを注視している
 			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist)) {
 				Debug.Log (hit.collider.gameObject.name);
