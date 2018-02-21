@@ -1,14 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\someGaze.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ghostController.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Script\someGaze.cs" Line="6" Column="2" />
-      <File FileName="Assets\Script\ghostController.cs" Line="56" Column="2" />
-=======
-      <File FileName="Assets\Script\someGaze.cs" Line="24" Column="12" />
-      <File FileName="Assets\Script\ghostController.cs" Line="59" Column="3" />
->>>>>>> add1
+      <File FileName="Assets\Script\ghostController.cs" Line="60" Column="2" />
+      <File FileName="Assets\Script\someGaze.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

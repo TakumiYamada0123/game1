@@ -55,11 +55,7 @@ public class ghostController : MonoBehaviour {
 														RigidbodyConstraints.FreezeRotationX |
 														RigidbodyConstraints.FreezeRotationZ;
 
-<<<<<<< HEAD
-		this.gameObject.layer = 9;
-=======
 		this.gameObject.layer = 9;	// Layerを"Physics"に変更
->>>>>>> add1
 	}
 
 	// 離脱(操作対象から離れる)
@@ -71,11 +67,8 @@ public class ghostController : MonoBehaviour {
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
 			}
-<<<<<<< HEAD
-			this.gameObject.layer = 8;
-=======
+
 			this.gameObject.layer = 8;	// Layerを"Psychic"に変更
->>>>>>> add1
 		}
 	}
 }
