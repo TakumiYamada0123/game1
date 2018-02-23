@@ -189,6 +189,7 @@
      <Compile Include="Assets\Moe Baker\Moe Tools\Standalone\Utility\UI\UI Creator\UICreator.cs" />
      <Compile Include="Assets\Moe Baker\Moe Tools\Standalone\Utility\UI\URLButton.cs" />
      <Compile Include="Assets\Moe Baker\Moe Tools\Standalone\Utility\ValueEvent.cs" />
+     <Compile Include="Assets\Script\ActorOption.cs" />
      <Compile Include="Assets\Script\ghostController.cs" />
      <Compile Include="Assets\Script\someGaze.cs" />
      <None Include="Assets\Moe Baker\Advanced Rigidbody FirstPerson Controller\README.txt" />
