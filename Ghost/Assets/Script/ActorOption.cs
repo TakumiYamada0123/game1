@@ -17,8 +17,11 @@ public class ActorOption : MonoBehaviour {
 	public TypeList Type{ get; set; }
 
 	// Method : Initializing
-	public void Initialize(TypeList SetType){
-		Type = SetType;		// Defining ActorType
+	public ActorOption(){
+		Type = TypeList.None;	// ActorTypeを定義
+	}
+	public ActorOption(TypeList SetType){
+		Type = SetType;			// ActorTypeを定義
 	}
 
 	// Method : Setting of what the Camera can see

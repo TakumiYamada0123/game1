@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ActorOption.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ActorHuman.cs">
     <Files>
       <File FileName="Assets\Script\ghostController.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\someGaze.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorOption.cs" Line="11" Column="9" />
+      <File FileName="Assets\Script\ActorOption.cs" Line="24" Column="21" />
+      <File FileName="Assets\Script\ActorGhost.cs" Line="9" Column="28" />
+      <File FileName="Assets\Script\ActorHuman.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
