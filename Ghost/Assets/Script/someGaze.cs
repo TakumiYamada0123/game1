@@ -19,13 +19,13 @@ public class someGaze : MonoBehaviour {
 		RaycastHit hit;
 		Ray ray = camera.ViewportPointToRay (new Vector3(0.5f, 0.5f, 0));
 
-		Debug.DrawRay (ray.origin, ray.direction * rayDist, Color.black);				// cameraの向き
+		Debug.DrawRay (ray.origin, ray.direction * rayDist, Color.black);		// cameraの向き
 
 		// マウス離上時
 		if (Input.GetMouseButtonDown (1)) {
 			// cameraが何かを注視している
 			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist)) {
-				Debug.Log (hit.collider.gameObject.name);
+				Debug.Log (hit.collider.gameObject.name);		// 注視先を表示
 
 				// 対象のTagがControllableのとき
 				if (hit.collider.tag == "Controllable") {
