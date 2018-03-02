@@ -18,13 +18,14 @@ public class someGaze : MonoBehaviour {
 	void Update () {
 		RaycastHit hit;
 		Ray ray = camera.ViewportPointToRay (new Vector3(0.5f, 0.5f, 0));
+		int layerMask = (1 << LayerMask.NameToLayer ("Psychic")) | (1 << LayerMask.NameToLayer ("Physics"));
 
 		Debug.DrawRay (ray.origin, ray.direction * rayDist, Color.black);		// cameraの向き
 
 		// マウス離上時
 		if (Input.GetMouseButtonDown (1)) {
 			// cameraが何かを注視している
-			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist)) {
+			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist, layerMask)) {
 				Debug.Log (hit.collider.gameObject.name);		// 注視先を表示
 
 				// 対象のTagがControllableのとき

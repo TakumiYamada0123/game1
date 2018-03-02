@@ -5,6 +5,7 @@ using UnityEngine;
 public class ghostController : MonoBehaviour {
 
 	public GameObject controlObject;	// 憑依対象を保持するオブジェクト
+	public CameraSetter cameraSetter;	// カメラ設定スクリプト
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,10 @@ public class ghostController : MonoBehaviour {
 				child.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
+
+				// Ghost(Player)をサーチ
+			} else if (child.gameObject.tag == "Player") {
+				child.GetComponent<ActorGhost> ().RendererOFF ();	// Ghostの身体をレンダリングしない
 			}
 		}
 
@@ -55,6 +60,7 @@ public class ghostController : MonoBehaviour {
 														RigidbodyConstraints.FreezeRotationX |
 														RigidbodyConstraints.FreezeRotationZ;
 
+		cameraSetter.CameraRebuilding (GObj);		// 憑依対象ごとのカメラ設定
 		this.gameObject.layer = 9;	// Layerを"Physics"に変更
 	}
 
@@ -66,9 +72,13 @@ public class ghostController : MonoBehaviour {
 				child.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 				child.gameObject.GetComponent<BoxCollider> ().enabled = true;	// BoxColliderを再起動
 				child.parent = null;	// 子オブジェクトを解除
-			}
 
-			this.gameObject.layer = 8;	// Layerを"Psychic"に変更
+				// Ghost(Player)をサーチ
+			} else if (child.gameObject.tag == "Player") {
+				child.GetComponent<ActorGhost> ().RendererON ();	// Ghostの身体をレンダリングする
+				cameraSetter.CameraRebuilding (child);	// Ghostのカメラ設定
+			}
 		}
+		this.gameObject.layer = 8;	// Layerを"Psychic"に変更
 	}
 }

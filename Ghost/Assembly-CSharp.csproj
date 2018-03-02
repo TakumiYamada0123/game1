@@ -192,6 +192,7 @@
      <Compile Include="Assets\Script\ActorGhost.cs" />
      <Compile Include="Assets\Script\ActorHuman.cs" />
      <Compile Include="Assets\Script\ActorOption.cs" />
+     <Compile Include="Assets\Script\CameraSetter.cs" />
      <Compile Include="Assets\Script\ghostController.cs" />
      <Compile Include="Assets\Script\someGaze.cs" />
      <None Include="Assets\Moe Baker\Advanced Rigidbody FirstPerson Controller\README.txt" />
