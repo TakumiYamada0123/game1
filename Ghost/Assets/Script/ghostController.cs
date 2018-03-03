@@ -7,9 +7,11 @@ public class ghostController : MonoBehaviour {
 	public GameObject controlObject;	// 憑依対象を保持するオブジェクト
 	public CameraSetter cameraSetter;	// カメラ設定スクリプト
 
+	public bool isPossessing{ get; set; }
+
 	// Use this for initialization
 	void Start () {
-		
+		isPossessing = false;
 	}
 	
 	// Update is called once per frame
@@ -61,7 +63,9 @@ public class ghostController : MonoBehaviour {
 														RigidbodyConstraints.FreezeRotationZ;
 
 		cameraSetter.CameraRebuilding (GObj);		// 憑依対象ごとのカメラ設定
-		this.gameObject.layer = 9;	// Layerを"Physics"に変更
+		this.gameObject.layer = 9;					// Layerを"Physics"に変更
+		isPossessing = true;						// 憑依中状態に遷移
+		Debug.Log ("Possession!!");
 	}
 
 	// 離脱(操作対象から離れる)
@@ -76,9 +80,11 @@ public class ghostController : MonoBehaviour {
 				// Ghost(Player)をサーチ
 			} else if (child.gameObject.tag == "Player") {
 				child.GetComponent<ActorGhost> ().RendererON ();	// Ghostの身体をレンダリングする
-				cameraSetter.CameraRebuilding (child);	// Ghostのカメラ設定
+				cameraSetter.CameraRebuilding (child.gameObject);	// Ghostのカメラ設定
 			}
 		}
-		this.gameObject.layer = 8;	// Layerを"Psychic"に変更
+		this.gameObject.layer = 8;		// Layerを"Psychic"に変更
+		isPossessing = false;			// 憑依中状態に遷移
+		Debug.Log ("Disengagement");
 	}
 }

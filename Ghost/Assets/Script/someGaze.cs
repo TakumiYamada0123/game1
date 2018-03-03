@@ -24,7 +24,7 @@ public class someGaze : MonoBehaviour {
 
 		// マウス離上時
 		if (Input.GetMouseButtonDown (1)) {
-			// cameraが何かを注視している
+			// cameraが憑依可能な対象を注視している
 			if (Physics.SphereCast (ray, rayRadius, out hit, rayDist, layerMask)) {
 				Debug.Log (hit.collider.gameObject.name);		// 注視先を表示
 
@@ -34,10 +34,13 @@ public class someGaze : MonoBehaviour {
 					// 憑依
 					GhostCtrl.Possession (hit.collider.gameObject);
 				}
-			// 何も見ていない
+			// 憑依可能な対象を見ていない
 			} else {
-				// 離脱
-				GhostCtrl.Disengagement();
+				// 憑依中のとき
+				if(GhostCtrl.isPossessing){
+					// 離脱
+					GhostCtrl.Disengagement();
+				}
 			}
 		}
 	}

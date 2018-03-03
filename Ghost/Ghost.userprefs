@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ActorOption.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ghostController.cs">
     <Files>
-      <File FileName="Assets\Script\ghostController.cs" Line="75" Column="5" />
+      <File FileName="Assets\Script\ghostController.cs" Line="43" Column="53" />
       <File FileName="Assets\Script\someGaze.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorOption.cs" Line="26" Column="2" />
-      <File FileName="Assets\Script\ActorGhost.cs" Line="7" Column="1" />
-      <File FileName="Assets\Script\ActorHuman.cs" Line="15" Column="64" />
+      <File FileName="Assets\Script\ActorOption.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ActorGhost.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ActorHuman.cs" Line="1" Column="1" />
       <File FileName="Assets\Moe Baker\Advanced Rigidbody FirstPerson Controller\Scripts\Controller\FPController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\CameraSetter.cs" Line="11" Column="77" />
+      <File FileName="Assets\Script\CameraSetter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
