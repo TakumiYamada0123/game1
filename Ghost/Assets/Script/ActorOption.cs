@@ -31,6 +31,10 @@ public class ActorOption : MonoBehaviour {
 		camera.cullingMask |= (1 << LayerMask.NameToLayer ("Physics"));
 		camera.cullingMask |= (1 << LayerMask.NameToLayer ("Psy_snag"));
 		camera.cullingMask |= (1 << LayerMask.NameToLayer ("Phy_snag"));
-		Debug.Log ("SetViewable_Parent");
+	}
+
+	// Method : Canceling camera settings
+	public virtual void ReleaseViewable (Camera camera){
+
 	}
 }

@@ -196,6 +196,7 @@
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
      <Compile Include="Assets\Script\ActorGhost.cs" />
+     <Compile Include="Assets\Script\ActorGolem.cs" />
      <Compile Include="Assets\Script\ActorHuman.cs" />
      <Compile Include="Assets\Script\ActorOption.cs" />
      <Compile Include="Assets\Script\CameraSetter.cs" />
@@ -249,17 +250,17 @@
  <Reference Include="ProBuilderCore-Unity5">
  <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
- <Reference Include="pb_Stl">
- <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
- </Reference>
- <Reference Include="Poly2Tri">
- <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
- </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
  <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
  <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ </Reference>
+ <Reference Include="pb_Stl">
+ <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ </Reference>
+ <Reference Include="Poly2Tri">
+ <HintPath>C:/Users/yamada.takumi/Documents/GitHub/game1/Ghost/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
