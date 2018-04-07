@@ -56,6 +56,12 @@ public class ghostController : MonoBehaviour {
 		float GObj_Height = GObj.transform.localScale.y * boxcol.size.y;
 		float GObj_Radius = GObj.transform.localScale.x * boxcol.size.x * 0.5f;
 
+		// 自身のRotationを憑依対象のRotationに合わせる
+		Vector3 rotateVector = GObj.transform.rotation.eulerAngles;
+		this.transform.rotation = Quaternion.Euler(rotateVector);
+		Debug.Log (rotateVector);
+		Debug.Log (this.transform.rotation.eulerAngles);
+
 		/*/ 自身のRadiusを憑依対象のRadiusに合わせる
 		this.GetComponent<CapsuleCollider> ().radius = GObj_Radius;
 		this.GetComponent<CapsuleCollider> ().height = GObj_Height;

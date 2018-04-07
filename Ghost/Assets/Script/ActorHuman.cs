@@ -14,4 +14,14 @@ public class ActorHuman : ActorOption {
 		camera.cullingMask &= ~(1 << LayerMask.NameToLayer ("Psychic"));	// "Psychic"を視認不能にする
 		camera.cullingMask &= ~(1 << LayerMask.NameToLayer ("Psy_snag"));	// "Psy_snag"を視認不能にする
 	}
+
+	// Method : Action-Attack
+	public override void Attack(){
+
+	}
+
+	// Method : Action-Special
+	public override void Special(Camera camera){
+
+	}
 }

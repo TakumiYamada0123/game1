@@ -37,4 +37,14 @@ public class ActorOption : MonoBehaviour {
 	public virtual void ReleaseViewable (Camera camera){
 
 	}
+
+	// Method : Action-Attack
+	public virtual void Attack(){
+
+	}
+
+	// Method : Action-Special
+	public virtual void Special(Camera camera){
+
+	}
 }

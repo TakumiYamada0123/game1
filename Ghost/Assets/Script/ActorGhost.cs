@@ -24,4 +24,14 @@ public class ActorGhost : ActorOption {
 	public void RendererOFF (){
 		renderer.enabled = false;
 	}
+
+	// Method : Action-Attack
+	public override void Attack(){
+
+	}
+
+	// Method : Action-Special
+	public override void Special(Camera camera){
+
+	}
 }

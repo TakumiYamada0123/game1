@@ -54,4 +54,14 @@ public class ActorGolem : ActorOption {
 
 		Destroy(this.transform.Find ("GolemCamera").gameObject);
 	}
+
+	// Method : Action-Attack
+	public override void Attack(){
+
+	}
+
+	// Method : Action-Special
+	public override void Special(Camera camera){
+
+	}
 }

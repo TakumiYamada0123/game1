@@ -1,16 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ContrastEnhance.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ActionControl.cs">
     <Files>
-      <File FileName="Assets\Script\ghostController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ghostController.cs" Line="26" Column="2" />
       <File FileName="Assets\Script\someGaze.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorOption.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorGhost.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorHuman.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\ActorGolem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ActorOption.cs" Line="34" Column="3" />
+      <File FileName="Assets\Script\ActorGhost.cs" Line="17" Column="2" />
+      <File FileName="Assets\Script\ActorHuman.cs" Line="16" Column="3" />
+      <File FileName="Assets\Script\ActorGolem.cs" Line="66" Column="3" />
+      <File FileName="Assets\Script\ActorBat.cs" Line="44" Column="2" />
       <File FileName="Assets\Script\CameraSetter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\CreateUltrasonic.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\ContrastEnhance.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shader\Contrast.shader" Line="7" Column="5" />
+      <File FileName="Assets\Shader\Contrast.shader" Line="1" Column="1" />
+      <File FileName="Assets\Shader\Monochrome.shader" Line="1" Column="1" />
+      <File FileName="Assets\Script\Monochrome.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ChangeSkyBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\LightSwitch.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\ActionControl.cs" Line="12" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
