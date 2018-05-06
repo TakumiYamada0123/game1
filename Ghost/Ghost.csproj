@@ -257,6 +257,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Script\Actor\Actor.cs" />
     <Compile Include="Assets\Script\Actor\ActorBat.cs" />
     <Compile Include="Assets\Script\Actor\ActorGhost.cs" />
     <Compile Include="Assets\Script\Actor\ActorGolem.cs" />
@@ -264,15 +265,25 @@
     <Compile Include="Assets\Script\Actor\ActorOption.cs" />
     <Compile Include="Assets\Script\Actor\ActorShaman.cs" />
     <Compile Include="Assets\Script\Control\ActionControl.cs" />
+    <Compile Include="Assets\Script\Control\AttackManager.cs" />
+    <Compile Include="Assets\Script\Control\DamageCollider.cs" />
+    <Compile Include="Assets\Script\Control\DurabilityManager.cs" />
     <Compile Include="Assets\Script\Control\ghostController.cs" />
     <Compile Include="Assets\Script\Control\someGaze.cs" />
+    <Compile Include="Assets\Script\CreateUltrasonic.cs" />
     <Compile Include="Assets\Script\Generater\UltrasonicControl.cs" />
     <Compile Include="Assets\Script\Generater\UltrasonicGenerater.cs" />
+    <Compile Include="Assets\Script\GenerateUltrasonic.cs" />
+    <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\Ornament\Symbol.cs" />
+    <Compile Include="Assets\Script\Setting\CameraRay.cs" />
     <Compile Include="Assets\Script\Setting\CameraSetter.cs" />
     <Compile Include="Assets\Script\ShaderSupport\ContrastEnhance.cs" />
     <Compile Include="Assets\Script\ShaderSupport\Monochrome.cs" />
     <Compile Include="Assets\Script\Switch\ChangeSkyBox.cs" />
     <Compile Include="Assets\Script\Switch\LightSwitch.cs" />
+    <Compile Include="Assets\Script\UI\EventText.cs" />
+    <Compile Include="Assets\Script\UI\KeyUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Moe Baker\Advanced Rigidbody FirstPerson Controller\README.txt" />
@@ -299,9 +310,11 @@
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
+    <None Include="Assets\Readme.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\Shader\Contrast.shader" />
     <None Include="Assets\Shader\Monochrome.shader" />
+    <None Include="Assets\Shader\NewSurfaceShader.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

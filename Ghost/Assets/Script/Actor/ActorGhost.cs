@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class ActorGhost : ActorOption {
 
-	public Renderer renderer;	// Own "Renderer"
+    public CameraRay camRay;
+    public int attack = 20;
+    public new Renderer renderer;   // Own "Renderer"
 
-	// Method : Initializing
-	public ActorGhost():base(ActorOption.TypeList.Ghost){	// ActorTypeを定義
+    // Method : Initializing
+    public ActorGhost():base(ActorOption.TypeList.Ghost){	// ActorTypeを定義
 	}
+    
+    // Method : Setting of what the Camera can see
+    public override void SetViewable (Camera camera){
+		base.SetViewable (camera);      // "Psychic", "Physics"両方を視認可能な状態にする
+        
+    }
 
-	// Method : Setting of what the Camera can see
-	public override void SetViewable (Camera camera){
-		base.SetViewable (camera);		// "Psychic", "Physics"両方を視認可能な状態にする
-	}
-
-	// Method : To Render
-	public void RendererON (){
+    // Method : To Render
+    public void RendererON (){
 		renderer.enabled = true;
 	}
 
@@ -27,7 +30,28 @@ public class ActorGhost : ActorOption {
 
 	// Method : Action-Attack
 	public override void Attack(){
-		Debug.Log ("Attack-Ghost");
+        RaycastHit hit;
+        Ray _ray = camRay.someGaze();
+
+        // Rayが衝突するLayerを設定
+        int layerMask = (1 << LayerMask.NameToLayer("Psychic")) |           // 幽霊
+                        //(1 << LayerMask.NameToLayer("Physics")) |           // 物理
+                                                                            // (1 << LayerMask.NameToLayer ("Psy_snag")) |		// 結界(結界越しに憑依できるようにコメントアウト(結界の見えないキャラクターの弊害となるため))
+                        //(1 << LayerMask.NameToLayer("Phy_snag")) |			// 壁
+                        (1 << LayerMask.NameToLayer("Psy_Phy"));           // Shaman等、霊的且つ物理的なもの
+
+        Debug.DrawRay(_ray.origin, _ray.direction * camRay.rayDist, Color.black);       // cameraの向き
+
+        // cameraが攻撃可能な対象を注視している
+        if (Physics.Raycast(_ray, out hit, camRay.rayDist, layerMask))
+        {
+            if (hit.collider.gameObject.GetComponent<DurabilityManager>())
+            {
+                hit.collider.gameObject.GetComponent<DurabilityManager>().AddDamege(attack);
+            }
+        }
+        Debug.Log ("Attack-Ghost");
+
 	}
 
 	// Method : Action-Special

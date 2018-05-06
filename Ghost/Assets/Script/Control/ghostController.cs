@@ -76,7 +76,7 @@ public class ghostController : MonoBehaviour {
 														RigidbodyConstraints.FreezeRotationX |
 														RigidbodyConstraints.FreezeRotationZ;
 		// 憑依対象ごとのカメラ設定
-		cameraSetter.Rebuilding (GObj);												// 視認対象
+		cameraSetter.Rebuilding (GObj); 	// 視認対象
 		Vector3 position = new Vector3( 0, GObj.transform.localScale.y * EyePosition, 0 );
 		cameraSetter.Position(position);	// 位置
 
@@ -98,7 +98,7 @@ public class ghostController : MonoBehaviour {
 
 			// Ghost(Player)を検索
 			} else if (child.gameObject.tag == "Player") {
-				child.GetComponent<ActorGhost> ().RendererON ();			// Ghostの身体をレンダリングする
+				// child.GetComponent<ActorGhost> ().RendererON ();			// Ghostの身体をレンダリングする
 				cameraSetter.Rebuilding (child.gameObject);					// Ghostのカメラ視認設定
 				cameraSetter.Position(new Vector3( 0, EyePosition, 0 ));	// Ghostのカメラ位置設定
 			}
