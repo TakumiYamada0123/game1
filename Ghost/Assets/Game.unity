@@ -1226,7 +1226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surviveTime: 60
   showingframe: 75
-  hidableHeight: 175
+  hidableHeight: 250
   textPosition: {fileID: 376939258}
 --- !u!1 &378763046
 GameObject:
@@ -1596,7 +1596,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-309472
+  m_Name: pb_Mesh-1048
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -5878,7 +5878,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-294926
+  m_Name: pb_Mesh-1034
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
